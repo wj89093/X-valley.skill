@@ -13,6 +13,7 @@ description: |
 | 数据 | 链接 |
 |------|------|
 | 话术库 | https://www.feishu.cn/docx/IejgdDMPqoceuKxdidDc2t2pnjg |
+| 环评与安全合规说明 | https://www.feishu.cn/docx/WdIid6nuLo4zedxYJVfcre9jnjg |
 | 最新动态 | https://www.feishu.cn/docx/QeNBde88Foa4Ogxk1wwcz4DenEg |
 
 ## 使用方式
