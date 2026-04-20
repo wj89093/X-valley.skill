@@ -21,4 +21,5 @@
 
 ## 联系方式
 
-招商负责人飞书：https://www.feishu.cn/invitation/page/add_contact/?token=69asd846-9419-48ea-b934-bae846be79dc&unique_id=BVA1msDLHGiyzLJn-wsQkw==
+招商负责人微信：
+wj89093
