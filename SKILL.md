@@ -60,6 +60,18 @@ description: |
 工具：feishu_fetch_doc(doc_id="IejgdDMPqoceuKxdidDc2t2pnjg")
 ```
 
+---
+
+## 数据源 3：环评与安全合规
+
+```
+文档ID：WdIid6nuLo4zedxYJVfcre9jnjg
+文档名：新道蓝谷·环评与安全合规说明
+工具：feishu_fetch_doc(doc_id="WdIid6nuLo4zedxYJVfcre9jnjg")
+```
+
+**读取时机**：用户问到环评、排污、危化品、GMP认证、EHS、废水处理、环评豁免等合规问题时调用。
+
 **读取时机**：用户问到以下内容时调用（单次获取，多次复用）：
 - 园区简介/是做什么的
 - 位置/交通/配套
