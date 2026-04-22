@@ -88,12 +88,15 @@ description: |
 
 ---
 
-## 活动文档（OPC 社区活动通知）
+## 数据源 4：OPC 社区活动中心
 
 ```
 文档ID：AemaddwOZoFrqQxt0mqcyUrqnrh
+文档名：新道蓝谷 OPC 社区活动中心
 工具：feishu_fetch_doc(doc_id="AemaddwOZoFrqQxt0mqcyUrqnrh")
 ```
+
+**读取时机**：用户问到OPC社区活动、或主动要求"查看有什么活动"时调用。
 
 ---
 
