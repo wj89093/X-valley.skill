@@ -7,15 +7,16 @@
 ### 1. xiaoyuan-vault
 
 - **路径**：`projects/xiaoyuan-vault/`
-- **远程仓库**：https://github.com/wj89093/xiaoyuan-vault
-- **状态**：✅ v1.3.0-free 发布准备中
+- **远程仓库**：https://github.com/wj89093/xiaoyuan-vault-free
+- **状态**：✅ v1.3.0-free 已发布
 - **类别**：桌面应用 (Electron)
 - **License**：MIT
-- **作用**：免费的本地知识库管理工具，支持 Markdown 编辑、知识图谱、多 vault 隔离、Skill.md 插件
-- **发布版**：
-  - Pro 版：付费，含内置 AI Agent
-  - Free 版：开源，仅 vault 主功能
-- **关联 Skill**：`xiaoyuan-vault-skill`（已预置在 vault 模板中）
+- **作用**：免费的本地知识库管理工具，支持 Markdown 编辑、知识图谱、多 vault 隔离、Schema、Lint
+- **发布仓库**：[wj89093/xiaoyuan-vault-free](https://github.com/wj89093/xiaoyuan-vault-free)（开源版专用）
+- **主开发仓库**：[wj89093/xiaoyuan-vault](https://github.com/wj89093/xiaoyuan-vault)（含 Pro 代码）
+- **开源版 vs Pro**：
+  - 开源版：vault 主功能 + Skill.md 插件（接用户自己的 Agent）
+  - Pro 版：付费，含内置 AI Agent / 剪贴板浮窗 / AI Chat
 
 ### 2. skill-x-valley
 
