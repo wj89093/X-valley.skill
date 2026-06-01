@@ -1,29 +1,87 @@
-# 新道蓝谷.skill
+# 新道蓝谷.skill — 项目合集
 
-帮助企业了解金帝·新道蓝谷生命科学园的入驻条件、优惠政策、园区配套等信息，并提供预约参观和招商负责人联系方式。
+> 个人 / 团队 / 园区的项目 + 工具 + 技能 聚合仓库
 
-## 功能
+这里放新道蓝谷相关的所有项目和工具，按"项目（projects/）"组织，每个项目独立发展。
 
-- 回答园区基本情况、位置、硬件配置、GMP标准等咨询
-- 介绍OPC社区（1人起租共享实验室）
-- 解答萧山5213等政策补贴问题
-- **解答环评、安评、环保、危化品相关合规问题**（覆盖生物医药、半导体、新材料等12个行业）
-- 提供招商负责人联系方式，预约实地参观
+---
 
-## 数据来源
+## 项目列表
 
-所有数据托管于飞书文档，实时更新：
-- **问答库**：园区介绍、FAQ、政策条款
-- **环评与安全合规说明**：12个行业环评要点、量化数据、招商Q&A
-- **最新动态**：入驻企业、园区新闻
-- **OPC社区活动**：园区主办及杭州精选科技活动（持续更新）
-- **杭州AI活动清单**：当月AI/科技活动参考列表
+| 项目 | 说明 | 状态 | 链接 |
+|------|------|------|------|
+| **xiaoyuan-vault** | 免费的本地知识库（开源版）<br/>支持 Markdown / 知识图谱 / 搜索 / 多 vault / Skill.md 插件 | ✅ v1.3.0-free | [查看](projects/xiaoyuan-vault/) |
+| **skill-x-valley** | 金帝·新道蓝谷生命科学园招商助手<br/>解答园区入驻、政策、环评合规等问题 | ✅ v1.0 | [查看](projects/skill-x-valley/) |
+| ... | (后续项目按需添加) | 📋 | - |
 
-## 安装
+---
 
-将此目录配置到支持skill 协议的平台即可。
+## 目录结构
 
-## 联系方式
+```
+.
+├── projects/                ← 子项目目录
+│   ├── xiaoyuan-vault/      ← git submodule 指向 wj89093/xiaoyuan-vault
+│   └── skill-x-valley/      ← 当前 Skill 内容（SKILL.md + 数据）
+├── docs/                    ← 顶层文档
+└── README.md
+```
 
-联系SKILL主理人，送一杯咖啡：
-https://www.feishu.cn/invitation/page/add_contact/?token=69asd846-9419-48ea-b934-bae846be79dc&unique_id=BVA1msDLHGiyzLJn-wsQkw==
+---
+
+## 快速开始
+
+### 克隆整个合集（含所有子项目）
+
+```bash
+git clone --recurse-submodules https://github.com/wj89093/X-valley.skill.git
+```
+
+如果忘了 `--recurse-submodules`，补救：
+
+```bash
+cd X-valley.skill
+git submodule update --init --recursive
+```
+
+### 只克隆顶层（不含子项目）
+
+```bash
+git clone https://github.com/wj89093/X-valley.skill.git
+# 子项目目录会是空的
+```
+
+### 同步子项目到最新
+
+```bash
+git submodule update --remote
+```
+
+---
+
+## 添加新项目
+
+```bash
+# 1. 在 GitHub 上创建新仓库
+# 2. 加为 submodule
+git submodule add https://github.com/wj89093/new-project.git projects/new-project
+# 3. 提交
+git add . && git commit -m "feat: add new-project submodule"
+git push
+```
+
+---
+
+## 贡献
+
+- 顶层仓库**只做导航 + 索引**，不直接修改子项目代码
+- 子项目各自独立发展，PR 提交到对应仓库
+- 添加新项目请开 Issue 讨论
+
+---
+
+## License
+
+MIT © 新道蓝谷团队
+
+各子项目 License 见各自仓库。
