@@ -6,88 +6,60 @@
 
 ---
 
-## 我们在做什么
+## 项目
 
-围绕"新道蓝谷"这个 IP，我们有：
+### 📚 xiaoyuan-vault
 
-- **园区招商** — 跟企业打交道（入驻、租赁、政策、合规）
-- **内部工具** — 让团队 / 园区办公更高效
-- **个人 / 团队知识管理** — 不让经验流失
-- **Skill 化** — 把日常工作流做成 AI 可执行的 Skill
+LLM 友好的本地知识库管理工具（Electron 桌面应用）。
 
-具体项目见 [`projects/`](projects/)。
+- **Skill.md Agent 协议** — LLM 通过 HTTP/SSE 主动调用 vault，不是单纯读文件
+- **Markdown 编辑** — atomic-editor 实时渲染
+- **知识图谱** — 自动从 `_wiki/` 构建节点 + 关系
+- **多 vault 隔离** — 每个 vault 独立索引与配置
+- **Schema & Lint** — 自动检测 + 修复
+- **多主题 + 国际化**
 
----
+**状态**：✅ v1.3.1-free
+**License**：MIT
+**仓库**：[github.com/wj89093/xiaoyuan-vault-free](https://github.com/wj89093/xiaoyuan-vault-free)
 
-## 项目列表
+#### 与同类 LLM Wiki 产品的对比
 
-| 项目 | 说明 | 状态 |
-|------|------|------|
-| [**xiaoyuan-vault**](projects/xiaoyuan-vault/) | 免费的本地知识库（开源版）<br/>支持 Markdown / 知识图谱 / 搜索 / 多 vault / Skill.md 插件 | ✅ v1.3.0-free |
-| [**skill-x-valley**](projects/skill-x-valley/) | 金帝·新道蓝谷生命科学园招商助手<br/>园区入驻、政策、环评合规智能问答 | ✅ v1.0 |
+| 维度 | xiaoyuan-vault | AnythingLLM | Khoj | Reor | Mem |
+|------|---------------|-------------|------|------|-----|
+| **开源协议** | MIT | MIT | AGPL | GPL | ❌ 闭源 |
+| **部署方式** | 桌面 App | Docker / Desktop | Docker / 桌面 | 桌面 App | 云端 |
+| **Skill.md Agent 协议** | ✅ 内置 | ❌ | ❌ | ❌ | ❌ |
+| **LLM 接入方式** | 任何 Skill 协议 Agent | OpenAI / Ollama | 多家 | 本地为主 | 集成 |
+| **多 vault** | ✅ 内置 | ⚠️ workspaces | ❌ | ❌ | ⚠️ 集合 |
+| **Schema / Lint** | ✅ 内置 | ⚠️ 提示词 | ❌ | ❌ | ❌ |
+| **FTS 搜索** | ✅ FTS5 | ✅ 向量 | ✅ | ✅ | ✅ |
+| **中文友好** | ✅ | ⚠️ | ⚠️ | ⚠️ | ❌ |
 
-## 项目添加流程
+**差异化**：
 
-我们鼓励所有新道蓝谷相关的项目都聚合到这里。
-
-**要求**：
-- 独立仓库（不与合集混编）
-- MIT 兼容 License
-- 至少 1 个明确维护者
-- 有 README 和入门指南
-
-**步骤**：
-1. 在 GitHub 上创建新仓库
-2. 在本合集里加 submodule：
-   ```bash
-   git submodule add <repo-url> projects/<name>
-   ```
-3. 在本 README 表格里加一行
-4. 提交 push
-
-详见 [`docs/PROJECTS.md`](docs/PROJECTS.md)。
+- **Skill.md Agent 协议（独占）** — 任何支持 Skill.md 的 Agent（OpenClaw / Claude Code / 自建 LLM）可直接调用 vault；竞品都是"LLM 读文档"，xiaoyuan-vault 是"LLM **通过协议** 调用 vault"
+- **桌面 App 而非 Docker** — 单机安装即用
+- **多 vault + Schema/Lint 组合** — 结构化是 LLM 友好的基础
+- **MIT 协议** — 比 AGPL 更宽松
 
 ---
 
-## 如何使用这个合集
+### 🤖 skill-x-valley
 
-### 完整克隆（含子项目）
+金帝·新道蓝谷生命科学园 AI 招商助手（Skill.md 文档）。
 
-```bash
-git clone --recurse-submodules https://github.com/wj89093/X-valley.skill.git
-```
+- **4 个飞书数据源** — 实时读取动态、话术、环评合规、OPC 活动
+- **智能触发** — 园区名称 / 入驻 / 政策 / 环评 / OPC 等关键词自动激活
+- **数据优先** — 政策金额精确引用飞书原文，不自行补充
+- **招商规范** — 首次响应调取话术库、留资通知、不过度承诺
+- **OPC 活动通知** — 每天 09:00 自动抓取新活动并推送
+- **贪吃虾对战** — "来一局贪吃虾"触发游戏，Agent 自动参战
 
-如果忘了 `--recurse-submodules`：
-
-```bash
-cd X-valley.skill
-git submodule update --init --recursive
-```
-
-### 同步所有子项目到最新
-
-```bash
-git submodule update --remote
-```
-
-### 只更新某个子项目
-
-```bash
-git submodule update --remote projects/xiaoyuan-vault
-```
+**状态**：✅ v1.0
+**分类**：Skill.md 文档
+**License**：MIT
 
 ---
 
-## 维护
-
-- 顶层仓库**只做导航 + 索引**，不直接修改子项目代码
-- 子项目各自独立发展，PR 提交到对应仓库
-- 添加 / 移除项目请开 Issue 讨论
-
----
-
-## License
-
-MIT © 新道蓝谷团队
-
-各子项目 License 见各自仓库。
+**License**：MIT © 新道蓝谷团队
